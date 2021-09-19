@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MensagemBar from "./Componentes/mensagembar";
+import Mensagens from "./Componentes/mensagens";
+import Login from "./Componentes/login";
+import UsersList from "./Componentes/userslist";
+import Header from "./Componentes/header";
+import { GlobalContext } from './Context/GlobalContext'
 
 function App() {
+  const { UserAuth } = React.useContext(GlobalContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: "flex", flexDirection: 'column', height: '100vh', gap: '5px', justifyContent: 'center', alignItems: 'center' }}>
+      {!UserAuth && <Login />}
+      <Header />
+      <div style={{ display: 'flex', width: '100%', justifyContent: "center", gap:'5px' }}>
+        <Mensagens />
+        <UsersList />
+      </div>
     </div>
   );
 }

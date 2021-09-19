@@ -1,0 +1,20 @@
+.login-container{
+    background-color: #D9E7FE;
+    display: block;
+    position: absolute;
+    flex: 1;
+    width: 40%;
+    z-index: 1;
+    height: 700px;
+    opacity: 0.9;
+}
+.login-body{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login-body Button{
+    background-color: white;
+}

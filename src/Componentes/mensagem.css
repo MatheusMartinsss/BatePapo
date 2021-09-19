@@ -1,0 +1,29 @@
+.mensagem-container{
+    display: flex;
+    flex-direction: column;
+}
+.mensagem-card{
+  display: flex;
+  padding: 5px;
+  box-sizing: border-box;
+  white-space: normal;
+  word-break: break-all;
+  background-color: #ACB4D2;
+  border-radius: 16px;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.mensagem-header{
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+}
+.mensagem-body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+.mensagem-footer{
+    justify-content: flex-end;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
