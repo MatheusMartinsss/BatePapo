@@ -15,7 +15,7 @@ function Login() {
                     buttonText="Login"
                     cookiePolicy={'single_host_origin'}
                     onSuccess = {AuthRequest}
-                />,
+                />
             </div>
         </div>
     )
