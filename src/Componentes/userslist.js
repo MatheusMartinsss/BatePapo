@@ -2,35 +2,17 @@ import React from 'react';
 import User from './user';
 
 import './userslist.css'
-import userImagem from './defaultuser.jpg'
+import { GlobalContext } from '../Context/GlobalContext';
 
-const users = [{
-    userID: 0,
-    userName: 'User1',
-    userAvatar: userImagem,
 
-}, {
-    userID: 1,
-    userName: 'User2',
-    userAvatar: 'https://www.w3schools.com/howto/img_avatar.png',
-
-}, {
-    userID: 2,
-    userName: 'User3',
-    userAvatar: userImagem,
-
-}, {
-    userID: 3,
-    userName: 'User4',
-    userAvatar: userImagem,
-
-}]
 
 function UsersList() {
+    const {Users} = React.useContext(GlobalContext)
+    console.log('UserList', Users)
     return (
         <div className='userslist-container'>
             <div>
-                {users.map((item) => (
+                {Users.map((item) => (
                     <User user={item} />
                 ))}
             </div>
