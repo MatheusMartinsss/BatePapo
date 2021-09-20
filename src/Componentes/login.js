@@ -18,6 +18,7 @@ function Login() {
                     buttonText="Login"
                     cookiePolicy={'single_host_origin'}
                     onSuccess = {onsuces}
+                    onFailure = {console.log('falhou')}
                 />
             </div>
         </div>
