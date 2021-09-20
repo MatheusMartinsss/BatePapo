@@ -1,11 +1,8 @@
 import React from 'react';
-import { Button } from '@mui/material'
 import './login.css'
-import GoogleIcon from '@mui/icons-material/Google';
 import { GoogleLogin } from 'react-google-login';
 import { GlobalContext } from '../Context/GlobalContext'
 function Login() {
- 
     const { AuthRequest } = React.useContext(GlobalContext)
     return (
         <div className='login-container'>
@@ -13,9 +10,10 @@ function Login() {
                 <h1>Entrar com</h1>
                 <GoogleLogin
                     clientId="884058811837-nli74mq4ne1r451csv2b6ved6tfkvobm.apps.googleusercontent.com"
+                    
                     buttonText="Login"
                     cookiePolicy={'single_host_origin'}
-                    onSuccess = {AuthRequest}
+                    onSuccess = {() => AuthRequest}
                     onFailure = {console.log('falhou')}
                 />
             </div>
