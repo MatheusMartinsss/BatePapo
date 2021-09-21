@@ -11,7 +11,7 @@ function Login() {
                 <GoogleLogin
                     clientId="884058811837-nli74mq4ne1r451csv2b6ved6tfkvobm.apps.googleusercontent.com"
                     
-                    buttonText="Login"
+                    buttonText="Google"
                     cookiePolicy={'single_host_origin'}
                     onSuccess = {() => AuthRequest}
                     onFailure = {console.log('falhou')}
